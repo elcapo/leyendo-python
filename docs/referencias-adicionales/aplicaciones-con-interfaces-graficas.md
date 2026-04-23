@@ -19,6 +19,14 @@ Programas de usuario final escritos en Python. Muestran cómo se combinan librer
 | pre-commit | [GitHub](https://github.com/pre-commit/pre-commit) | [Docs](https://pre-commit.com/) | Framework para gestionar git hooks en múltiples lenguajes. |
 | Sphinx | [GitHub](https://github.com/sphinx-doc/sphinx) | [Docs](https://www.sphinx-doc.org/) | Generador de documentación estándar del ecosistema Python. |
 
+### Servicios y plataformas
+
+| Proyecto | GitHub | Documentación | Descripción |
+| --- | --- | --- | --- |
+| Airflow | [GitHub](https://github.com/apache/airflow) | [Docs](https://airflow.apache.org/docs/) | Orquestador de workflows; patrones de DAGs, operadores y ejecutores. |
+| Home Assistant | [GitHub](https://github.com/home-assistant/core) | [Docs](https://www.home-assistant.io/docs/) | Plataforma de domótica; enorme pero bien modularizada. |
+
+
 ### GUI de escritorio
 
 | Proyecto | GitHub | Documentación | Descripción |
@@ -30,10 +38,3 @@ Programas de usuario final escritos en Python. Muestran cómo se combinan librer
 | MusicBrainz Picard | [GitHub](https://github.com/metabrainz/picard) | [Docs](https://picard-docs.musicbrainz.org/) | Etiquetador de música; Qt + Python con sistema de plugins. |
 | Napari | [GitHub](https://github.com/napari/napari) | [Docs](https://napari.org/) | Visor multidimensional de imágenes científicas; Qt moderno y muy activo. |
 | Spyder | [GitHub](https://github.com/spyder-ide/spyder) | [Docs](https://docs.spyder-ide.org/) | IDE científico que integra consola IPython y visualización. |
-
-### Servicios y plataformas
-
-| Proyecto | GitHub | Documentación | Descripción |
-| --- | --- | --- | --- |
-| Airflow | [GitHub](https://github.com/apache/airflow) | [Docs](https://airflow.apache.org/docs/) | Orquestador de workflows; patrones de DAGs, operadores y ejecutores. |
-| Home Assistant | [GitHub](https://github.com/home-assistant/core) | [Docs](https://www.home-assistant.io/docs/) | Plataforma de domótica; enorme pero bien modularizada. |
