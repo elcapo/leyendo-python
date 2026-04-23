@@ -8,6 +8,28 @@ Ahora que los ordenadores saben programar, leer y entender código se hace gana 
 
 Igual que aprendemos a entender el lenguaje antes de aprender a hablarlo, antes de construir nuestras propias abstracciones, conviene entender cómo las construyen en proyectos sólidos y bien estructurados.
 
+## Índice (borrador)
+
+Cada capítulo se apoya en una de las librerías de referencia como fuente principal de ejemplos; los cruces son intencionados para releer los mismos repos desde ángulos distintos.
+
+1. **Cómo leer código** — metodología del curso, setup (Python, `uv`) y clonado de los repos de referencia.
+2. **Sintaxis y tipos básicos** — variables, primitivas, operadores, condicionales y bucles.
+3. **Colecciones e iteración** — listas, tuplas, diccionarios, conjuntos, comprehensions, iteradores y generadores.
+4. **Funciones** — argumentos, `*args`/`**kwargs`, closures, lambdas y decoradores.
+5. **Manejo de errores** — `try`/`except`/`finally`, jerarquía de excepciones y excepciones propias.
+6. **Clases e introducción a la orientación a objetos** — atributos, métodos, *dunders*, herencia vs composición y `dataclass`.
+7. **Tipado estático** — `typing`, `Protocol`, `TypeVar`, `Optional` y `TYPE_CHECKING`.
+8. **Context managers y gestión de recursos** — `with`, `contextlib`, ficheros y `pathlib`.
+9. **Programación asíncrona** — `async`/`await`, corrutinas, `asyncio`, iteradores y context managers asíncronos.
+10. **Módulos y paquetes** — `import`, `__init__.py`, imports relativos, `__all__` y separación entre API pública e interna.
+11. **Tests con pytest** — fixtures, parametrización, *mocks* y cobertura.
+12. **Tooling moderno** — entorno virtual con `uv`, `pyproject.toml`, `ruff`, `mypy`, `pre-commit` y CI en GitHub Actions.
+13. **Documentación** — docstrings (estilo Google/NumPy), Sphinx/MkDocs y ejemplos ejecutables.
+14. **Logging** — el módulo `logging` de la librería estándar, *loggers*, *handlers*, niveles, configuración y buenas prácticas.
+15. **Patrones de desarrollo** — inmutabilidad y APIs fluidas, decoradores como puntos de extensión, composición sobre herencia, funciones puras y *pipelines* de iteración.
+16. **Empaquetado y distribución** — versionado, `build` y publicación en PyPI.
+17. **Siguientes pasos** — guía para leer proyectos medianos y grandes, con enlaces a las listas de profundización.
+
 ## Criterios de selección
 
 Los repositorios que este curso usa como referencias cumplen, como mínimo:
