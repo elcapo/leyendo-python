@@ -26,7 +26,7 @@ Cada capítulo del curso propondrá una ruta de lectura concreta dentro de uno o
 
 ### Control de versiones con `git`
 
-Con independencia de cuáles son los lenguajes de programación con los que trabajas, se hace imprescindible una herramienta de control de versiones. Y **git** es el estándar.
+Con independencia de cuáles son los lenguajes de programación con los que trabajas, se hace imprescindible una herramienta de control de versiones. Y **git** es con diferencia la más usada.
 
 Gracias a **git** puedes pasar de trabajar en una carpeta con ciertos ficheros en un estado determinado, a trabajar en un repositorio, que es una carpeta con histórico de cambios.
 
@@ -34,9 +34,7 @@ Estos cambios permiten mantener ramas con distintas versiones de los contenidos,
 
 #### Herramientas de consulta online
 
-Cuando un repositorio mantenidos con **git** se convierte en un proyecto compartido, es normal querer compartirlo con otra gente para editarlo de forma colaborativa.
-
-Para resolver esto, existen dos herramientas básicas:
+Cuando un repositorio mantenido con **git** se convierte en un proyecto compartido, es normal querer compartirlo con otra gente para editarlo de forma colaborativa. Para resolver esto, existen dos herramientas básicas:
 
 * [GitHub](https://github.com): El sitio web de repositorios de código más grande del mundo, mantenido por los autores mismos de **git**.
 
