@@ -60,21 +60,27 @@ Si tienes problemas, sigue las [instrucciones oficiales para instalar uv](https:
 
 ### Python
 
-Recomendamos Python 3.12 o superior. Con [`uv`](https://docs.astral.sh/uv/) instalado, basta con:
+**Python** es el lenguaje de programación sobre el que gira todo el curso. A lo largo de los capítulos vamos a asumir **Python 3.12** o superior, que es la versión con la que funcionan los proyectos de referencia.
+
+Aunque tu sistema operativo ya traiga una versión de Python instalada, es buena práctica dejar que sea **uv** quien gestione una propia, aislada del sistema, ejecutando:
 
 ```bash
 uv python install 3.12
 ```
 
+Así el intérprete que usemos en el curso no interfiere ni con el Python del sistema ni con el de otros proyectos que tengas en el ordenador.
+
 ### Clonar los repositorios de referencia
+
+**Clonar** un repositorio consiste en descargar una copia local completa —código, historial de cambios y ramas— a una carpeta de tu ordenador. Para evitarte lanzar cada clonación a mano, el curso trae un pequeño script que lo hace por ti.
 
 Desde la raíz del curso:
 
 ```bash
-python scripts/clone_repos.py
+uv run scripts/clone_repos.py
 ```
 
-El script crea la carpeta `repositorios/` (ya ignorada por git) con los seis proyectos del corpus:
+El script crea la carpeta `repositorios/` y dentro clona los seis proyectos que vamos a estudiar:
 
 | Proyecto | Carpeta local | Origen |
 | --- | --- | --- |
@@ -85,10 +91,12 @@ El script crea la carpeta `repositorios/` (ya ignorada por git) con los seis pro
 | rich | `repositorios/rich/` | <https://github.com/Textualize/rich> |
 | tenacity | `repositorios/tenacity/` | <https://github.com/jd/tenacity> |
 
-Volver a ejecutar el script actualiza cada copia con:
+Si más adelante vuelves a ejecutar el script sobre un repositorio ya clonado, en lugar de clonarlo otra vez lo actualiza con los últimos cambios mediante:
 
 ```bash
 git pull --ff-only
 ```
+
+El flag `--ff-only` asegura que la actualización solo prospera si puede hacerse avanzando la rama local sin mezclar cambios —útil si alguna vez has tocado la copia local por tu cuenta, porque el script no la pisará en silencio.
 
 Siguiente: **Capítulo 2 — Sintaxis y tipos básicos** (basado en `python-dotenv`).
