@@ -31,6 +31,13 @@ EXCLUDED_DIRS = frozenset({
 })
 
 
+def update_sources(repo: Path):
+    subprocess.run(
+        ["git", "-C", str(repo), "pull"],
+        capture_output=True,
+    )
+
+
 def last_commit_date(repo: Path) -> str:
     result = subprocess.run(
         ["git", "-C", str(repo), "log", "-1", "--format=%cs"],
@@ -85,6 +92,8 @@ def main() -> int:
     if not (repo / ".git").is_dir():
         print(f"No es un repositorio git: {repo}", file=sys.stderr)
         return 1
+
+    update_sources(repo)
 
     print(f"Proyecto:        {repo.name}")
     print(f"Último commit:   {last_commit_date(repo)}")

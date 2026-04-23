@@ -19,14 +19,14 @@ Los repositorios que este curso usa como referencias cumplen, como mínimo:
 
 ### Referencias
 
-| Proyecto | GitHub | Documentación | Descripción |
-| --- | --- | --- | --- |
-| click | [GitHub](https://github.com/pallets/click) | [Docs](https://click.palletsprojects.com/) | Construcción declarativa de CLIs con decoradores. |
-| more-itertools | [GitHub](https://github.com/more-itertools/more-itertools) | [Docs](https://more-itertools.readthedocs.io/) | Recetas de iteración; lectura muy didáctica sobre generadores. |
-| pendulum | [GitHub](https://github.com/sdispater/pendulum) | [Docs](https://pendulum.eustace.io/docs/) | Fechas y zonas horarias, con API muy cuidada. |
-| python-dotenv | [GitHub](https://github.com/theskumar/python-dotenv) | [Docs](https://saurabh-kumar.com/python-dotenv/) | Cargar variables de entorno desde `.env`. |
-| rich | [GitHub](https://github.com/Textualize/rich) | [Docs](https://rich.readthedocs.io/) | Renderizado de texto enriquecido en terminal; excelente diseño orientado a objetos. |
-| tenacity | [GitHub](https://github.com/jd/tenacity) | [Docs](https://tenacity.readthedocs.io/) | Reintentos con decoradores. |
+| Proyecto | Enlaces | Último commit | Tamaño | Descripción |
+| --- | --- | ---: | ---: | --- |
+| click | [GitHub](https://github.com/pallets/click)<br/>[Docs](https://click.palletsprojects.com/) | 2026-04-03 | 22.615 líneas<br/>1,3 MB | Construcción declarativa de CLIs con decoradores. |
+| more-itertools | [GitHub](https://github.com/more-itertools/more-itertools)<br/>[Docs](https://more-itertools.readthedocs.io/) | 2026-04-22 | 15.916 líneas<br/>639,1 KB | Recetas de iteración; lectura muy didáctica sobre generadores. |
+| pendulum | [GitHub](https://github.com/sdispater/pendulum)<br/>[Docs](https://pendulum.eustace.io/docs/) | 2026-03-30 | 25.518 líneas<br/>1.002,6 KB |Fechas y zonas horarias, con API muy cuidada. |
+| python-dotenv | [GitHub](https://github.com/theskumar/python-dotenv)<br/>[Docs](https://saurabh-kumar.com/python-dotenv/) | 2026-04-20 | 3.230 líneas<br/>157,4 KB | Cargar variables de entorno desde `.env`. |
+| rich | [GitHub](https://github.com/Textualize/rich)<br/>[Docs](https://rich.readthedocs.io/) | 2026-04-12 | 51.866 líneas<br/>18,8 MB | Renderizado de texto enriquecido en terminal; excelente diseño orientado a objetos. |
+| tenacity | [GitHub](https://github.com/jd/tenacity)<br/>[Docs](https://tenacity.readthedocs.io/) | 2026-03-23 | 5.267 líneas<br/>242,6 KB | Reintentos con decoradores. |
 
 Para seguir profundizando, una vez terminado el curso, hemos creado algunas listas adicionales:
 
