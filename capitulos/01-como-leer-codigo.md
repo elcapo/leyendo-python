@@ -1,0 +1,96 @@
+# Capítulo 1 — **Cómo leer código**
+
+> [!NOTE]
+> Este capítulo sienta las bases del curso: por qué tiene sentido estudiar Python leyendo antes que escribiendo, cómo aproximarse a un repositorio ajeno y cómo preparar un entorno local con los proyectos de referencia.
+
+## Por qué leer antes que escribir
+
+Leer buen código es la forma más directa de interiorizar las convenciones que marcan la diferencia en un proyecto profesional: nombres, estructura, tipado, gestión de errores, técnicas de testing y documentación.
+
+Además, cada vez más código se escribe con ayuda de LLMs. La habilidad decisiva se desplaza hacia leer, revisar y entender lo que otros —sean humanos, o máquinas— han escrito.
+
+## Cómo aproximarse a un repositorio
+
+Al abrir un repositorio por primera vez conviene recorrer, en este orden:
+
+1. **README.md** — qué problema resuelve el proyecto y cómo se usa.
+2. **pyproject.toml** — dependencias, versión mínima de Python y herramientas configuradas.
+3. **Estructura de carpetas** — el paquete principal suele estar en `src/<paquete>/` o `<paquete>/`.
+4. **Puntos de entrada** — el `__init__.py` del paquete principal y su `__all__` (si existe) describen la API pública.
+5. **Tests** — `tests/` es la documentación viva más fiable: muestran casos de uso y contratos.
+6. **Documentación** — la carpeta `docs/` o la correspondiente web oficial.
+
+Cada capítulo del curso propondrá una ruta de lectura concreta dentro de uno o varios proyectos. Pero antes, es recomendable que prepares tu equipo para explorarlos.
+
+## Preparar el entorno
+
+### Control de versiones con `git`
+
+Con independencia de cuáles son los lenguajes de programación con los que trabajas, se hace imprescindible una herramienta de control de versiones. Y **git** es el estándar.
+
+Gracias a **git** puedes pasar de trabajar en una carpeta con ciertos ficheros en un estado determinado, a trabajar en un repositorio, que es una carpeta con histórico de cambios.
+
+Estos cambios permiten mantener ramas con distintas versiones de los contenidos, volver a versiones anteriores de cualquiera de los ficheros, o saber quién y cuándo se hizo cada cambio.
+
+#### Herramientas de consulta online
+
+Cuando un repositorio mantenidos con **git** se convierte en un proyecto compartido, es normal querer compartirlo con otra gente para editarlo de forma colaborativa.
+
+Para resolver esto, existen dos herramientas básicas:
+
+* [GitHub](https://github.com): El sitio web de repositorios de código más grande del mundo, mantenido por los autores mismos de **git**.
+
+* [GitLab](https://about.gitlab.com): Una alternativa a GitHub que puede ser alojada en servidores privados, o hasta en ordenadores personales.
+
+En la práctica, puedes seguir este curso completo usando únicamente un navegador pero la experiencia no es la misma que la de clonar los repositorios en tu propio ordenador.
+
+Además de que, al clonarlos, ganas la posibilidad de trabajar cuando no tengas conexión a internet y se facilitan enormemente las tareas de lectura, edición y ejecución paso a paso.
+
+Por eso, te recomiendo que sigas las [instrucciones oficiales de instalación de **git**](https://git-scm.com/downloads).
+
+### Gestión de paquetes con `uv`
+
+Aunque entraremos en más detalle sobre las herramientas que debes de conocer para trabajar en proyectos escritos en Python, por el momento es suficiente con que instales **uv**, que es la herramienta que usaremos para gestionar dependencias, incluída la versión específica de Python que necesita cada proyecto.
+
+En la mayor parte de los casos, para instalar **uv** en Linux, o MacOS, o WSL, basta con ejecutar:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Si tienes problemas, sigue las [instrucciones oficiales para instalar uv](https://docs.astral.sh/uv/getting-started/installation/).
+
+### Python
+
+Recomendamos Python 3.12 o superior. Con [`uv`](https://docs.astral.sh/uv/) instalado, basta con:
+
+```bash
+uv python install 3.12
+```
+
+### Clonar los repositorios de referencia
+
+Desde la raíz del curso:
+
+```bash
+python scripts/clone_repos.py
+```
+
+El script crea la carpeta `repositorios/` (ya ignorada por git) con los seis proyectos del corpus:
+
+| Proyecto | Carpeta local | Origen |
+| --- | --- | --- |
+| click | `repositorios/click/` | <https://github.com/pallets/click> |
+| more-itertools | `repositorios/more-itertools/` | <https://github.com/more-itertools/more-itertools> |
+| pendulum | `repositorios/pendulum/` | <https://github.com/sdispater/pendulum> |
+| python-dotenv | `repositorios/python-dotenv/` | <https://github.com/theskumar/python-dotenv> |
+| rich | `repositorios/rich/` | <https://github.com/Textualize/rich> |
+| tenacity | `repositorios/tenacity/` | <https://github.com/jd/tenacity> |
+
+Volver a ejecutar el script actualiza cada copia con:
+
+```bash
+git pull --ff-only
+```
+
+Siguiente: **Capítulo 2 — Sintaxis y tipos básicos** (basado en `python-dotenv`).
