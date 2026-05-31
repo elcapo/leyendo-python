@@ -5,11 +5,13 @@
 
 ## Por qué leer antes de escribir
 
-Durante mucho tiempo, desarrollar consistía sobre todo en escribir. Escribir rápido, escribir bien y escribir sin interrupciones. Conocer de memoria las funciones más habituales evitaba desviar la atención hacia la documentación. Y dominar el entorno de desarrollo ahorraba segundos que, acumulados, terminaban convirtiéndose en horas. La destreza estaba en producir código con fluidez.
+Durante mucho tiempo, desarrollar consistía sobre todo en escribir. Escribir rápido, bien y minimizando las interrupciones. Conocer de memoria las funciones más habituales evitaba desviar la atención hacia la documentación. Y dominar el entorno de desarrollo ahorraba segundos que, acumulados, terminaban convirtiéndose en horas. La destreza estaba en producir código con fluidez.
 
 Pero cuando generar código deja de ser el cuello de botella, la atención se desplaza. Si una máquina puede producir cientos de líneas en unos segundos, el trabajo ya no consiste tanto en escribirlas como en comprenderlas. En seguir el hilo de una idea expresada en código ajeno, detectar sus errores, verificar sus supuestos y decidir si merece la pena conservarla.
 
 Cada vez más código lo escriben las máquinas y eso hace que cada vez haya más código que leer. Por eso, la habilidad que gana valor no es la de teclear más rápido, sino la de entender mejor. Leer se convierte en una forma de programar. Quizá la más importante.
+
+Por eso he pensado que sería útil un curso de programación en el que el foco está en saber leer y entender código. Y basado en la lectura de proyectos de código abierto conocidos por tener un código fuente profesional, bien estructurado y mantenible.
 
 ## Cómo aproximarse a un repositorio
 
