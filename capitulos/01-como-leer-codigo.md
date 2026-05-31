@@ -15,7 +15,9 @@ Por eso he pensado que sería útil un curso de programación en el que el foco 
 
 ## Cómo aproximarse a un repositorio
 
-Al abrir un repositorio por primera vez conviene recorrer, en este orden:
+Hoy en día el código fuente de cualquier programa que se precie, vive en repositorios. Un repositorio es una carpeta que puede contener archivos y más carpetas dentro. Con la característica especial de que permiten llevar un exhaustivo control de los cambios por los que pasa cada fichero.
+
+En el caso de proyectos escritos en Python, en una primera lectura rápida tus ojos deberían de empezar por buscar:
 
 1. **README.md** — qué problema resuelve el proyecto y cómo se usa.
 2. **pyproject.toml** — dependencias, versión mínima de Python y herramientas configuradas.
