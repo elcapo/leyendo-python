@@ -55,6 +55,7 @@ Para seguir profundizando, una vez terminado el curso, hemos creado algunas list
 
 - [Librerías para profundizar](./docs/referencias-adicionales/librerias-para-profundizar.md)
 - [Aplicaciones con interfaces gráficas](./docs/referencias-adicionales/aplicaciones-con-interfaces-graficas.md)
+- [Libros de referencia](./docs/referencias-adicionales/libros-de-referencia.md)
 
 ## Licencia
 
