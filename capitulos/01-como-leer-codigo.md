@@ -3,11 +3,13 @@
 > [!NOTE]
 > Este capítulo sienta las bases del curso: por qué tiene sentido estudiar Python leyendo antes que escribiendo, cómo aproximarse a un repositorio ajeno y cómo preparar un entorno local con los proyectos de referencia.
 
-## Por qué leer antes que escribir
+## Por qué leer antes de escribir
 
-Leer buen código es la forma más directa de interiorizar las convenciones que marcan la diferencia en un proyecto profesional: nombres, estructura, tipado, gestión de errores, técnicas de testing y documentación.
+Durante mucho tiempo, desarrollar consistía sobre todo en escribir. Escribir rápido, escribir bien y escribir sin interrupciones. Conocer de memoria las funciones más habituales evitaba desviar la atención hacia la documentación. Y dominar el entorno de desarrollo ahorraba segundos que, acumulados, terminaban convirtiéndose en horas. La destreza estaba en producir código con fluidez.
 
-Además, cada vez más código se escribe con ayuda de LLMs. La habilidad decisiva se desplaza hacia leer, revisar y entender lo que otros —sean humanos, o máquinas— han escrito.
+Pero cuando generar código deja de ser el cuello de botella, la atención se desplaza. Si una máquina puede producir cientos de líneas en unos segundos, el trabajo ya no consiste tanto en escribirlas como en comprenderlas. En seguir el hilo de una idea expresada en código ajeno, detectar sus errores, verificar sus supuestos y decidir si merece la pena conservarla.
+
+Cada vez más código lo escriben las máquinas y eso hace que cada vez haya más código que leer. Por eso, la habilidad que gana valor no es la de teclear más rápido, sino la de entender mejor. Leer se convierte en una forma de programar. Quizá la más importante.
 
 ## Cómo aproximarse a un repositorio
 
@@ -98,5 +100,3 @@ git pull --ff-only
 ```
 
 El flag `--ff-only` asegura que la actualización solo prospera si puede hacerse avanzando la rama local sin mezclar cambios —útil si alguna vez has tocado la copia local por tu cuenta, porque el script no la pisará en silencio.
-
-Siguiente: **Capítulo 2 — Sintaxis y tipos básicos** (basado en `python-dotenv`).
