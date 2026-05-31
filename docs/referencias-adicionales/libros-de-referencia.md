@@ -1,3 +1,7 @@
+# Leyendo Python
+
+## Libros de referencia
+
 * [Architecture Patterns with Python](https://turan-edu.uz/media/books/2025/01/15/Architecture-Patterns-with-Python.pdf) by Percival & Gregory
 * [Beyond the Basic Stuff with Python](https://dn721805.ca.archive.org/0/items/ebooks_202307/beyondthebasicstuffwithpython.pdf) by Al Sweigart
 * [Think Python](https://greenteapress.com/thinkpython2/thinkpython2.pdf) by Allen Downey

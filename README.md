@@ -8,7 +8,7 @@ Ahora que los ordenadores saben programar, leer y entender código se hace gana 
 
 Igual que aprendemos a entender el lenguaje antes de aprender a hablarlo, antes de construir nuestras propias abstracciones, conviene entender cómo las construyen en proyectos sólidos y bien estructurados.
 
-## Índice (borrador)
+## Índice
 
 Cada capítulo se apoya en una de las librerías de referencia como fuente principal de ejemplos; los cruces son intencionados para releer los mismos repos desde ángulos distintos.
 
@@ -27,8 +27,9 @@ Cada capítulo se apoya en una de las librerías de referencia como fuente princ
 13. **Documentación** — docstrings (estilo Google/NumPy), Sphinx/MkDocs y ejemplos ejecutables.
 14. **Logging** — el módulo `logging` de la librería estándar, *loggers*, *handlers*, niveles, configuración y buenas prácticas.
 15. **Patrones de desarrollo** — inmutabilidad y APIs fluidas, decoradores como puntos de extensión, composición sobre herencia, funciones puras y *pipelines* de iteración.
-16. **Empaquetado y distribución** — versionado, `build` y publicación en PyPI.
-17. **Siguientes pasos** — guía para leer proyectos medianos y grandes, con enlaces a las listas de profundización.
+16. **Arquitectura de aplicaciones** — modelado de dominio, patrón repositorio, casos de uso, unidades de trabajo y orientación a eventos.
+17. **Empaquetado y distribución** — versionado, `build` y publicación en PyPI.
+18. **Siguientes pasos** — guía para leer proyectos medianos y grandes, con enlaces a las listas de profundización.
 
 ## Criterios de selección
 
@@ -52,7 +53,7 @@ Los repositorios que este curso usa como referencias cumplen, como mínimo:
 
 Para seguir profundizando, una vez terminado el curso, hemos creado algunas listas adicionales:
 
-- [Librerías de tamaño mediano y grande](./docs/referencias-adicionales/librerias-para-profundizar.md)
+- [Librerías para profundizar](./docs/referencias-adicionales/librerias-para-profundizar.md)
 - [Aplicaciones con interfaces gráficas](./docs/referencias-adicionales/aplicaciones-con-interfaces-graficas.md)
 
 ## Licencia
