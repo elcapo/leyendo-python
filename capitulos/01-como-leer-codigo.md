@@ -1,30 +1,26 @@
 # Capítulo 1 — **Cómo leer código**
 
-> [!NOTE]
-> Este capítulo sienta las bases del curso: por qué tiene sentido estudiar Python leyendo antes que escribiendo, cómo aproximarse a un repositorio ajeno y cómo preparar un entorno local con los proyectos de referencia.
-
-## Por qué leer antes de escribir
-
-Durante mucho tiempo, desarrollar consistía sobre todo en escribir. Escribir rápido, bien y minimizando las interrupciones. Conocer de memoria las funciones más habituales evitaba desviar la atención hacia la documentación. Y dominar el entorno de desarrollo ahorraba segundos que, acumulados, terminaban convirtiéndose en horas. La destreza estaba en producir código con fluidez.
-
-Pero cuando generar código deja de ser el cuello de botella, la atención se desplaza. Si una máquina puede producir cientos de líneas en unos segundos, el trabajo ya no consiste tanto en escribirlas como en comprenderlas. En seguir el hilo de una idea expresada en código ajeno, detectar sus errores, verificar sus supuestos y decidir si merece la pena conservarla.
-
-Cada vez más código lo escriben las máquinas y eso hace que cada vez haya más código que leer. Por eso, la habilidad que gana valor no es la de teclear más rápido, sino la de entender mejor. Leer se convierte en una forma de programar. Quizá la más importante.
-
-Por eso he pensado que sería útil un curso de programación en el que el foco está en saber leer y entender código. Y basado en la lectura de proyectos de código abierto conocidos por tener un código fuente profesional, bien estructurado y mantenible.
-
 ## Cómo aproximarse a un repositorio
 
-Hoy en día el código fuente de cualquier programa que se precie, vive en repositorios. Un repositorio es una carpeta que puede contener archivos y más carpetas dentro. Con la característica especial de que permiten llevar un exhaustivo control de los cambios por los que pasa cada fichero.
+Hoy en día el código fuente de cualquier programa que se precie vive en repositorios con control de versiones. Un repositorio es una carpeta que puede contener archivos y más carpetas dentro. Y el control de versiones permite llevar control de los cambios por los que pasa cada fichero.
 
-En el caso de proyectos escritos en Python, en una primera lectura rápida tus ojos deberían de empezar por buscar:
+El sistema de control de cambios más popular hoy en día es, sin duda, **Git**. Y lo mejor que puedes hacer para familiarizarte rápido con él, si aún no lo conocías, es abrir un repositorio (como [click](https://github.com/pallets/click/)) y explorarlo. Verás que se parece mucho a un explorador de archivos.
 
-1. **README.md** — qué problema resuelve el proyecto y cómo se usa.
-2. **pyproject.toml** — dependencias, versión mínima de Python y herramientas configuradas.
-3. **Estructura de carpetas** — el paquete principal suele estar en `src/<paquete>/` o `<paquete>/`.
-4. **Puntos de entrada** — el `__init__.py` del paquete principal y su `__all__` (si existe) describen la API pública.
-5. **Tests** — `tests/` es la documentación viva más fiable: muestran casos de uso y contratos.
-6. **Documentación** — la carpeta `docs/` o la correspondiente web oficial.
+### Saber de qué va el proyecto
+
+En el caso de repositorios de programación, en una primera lectura rápida tus ojos deberían de empezar por buscar un archivo **README.md**. En condiciones normales, ahí encontrarás un resumen explicando en qué consiste el proyecto y algunas instrucciones sobre cómo instalarlo y cómo ponerlo en marcha.
+
+> Click es un paquete de Python para crear interfaces de línea de comandos atractivas de forma modular, con el mínimo código necesario. Es el "Kit de Creación de Interfaces de Línea de Comandos". Es altamente configurable, pero incluye configuraciones predeterminadas prácticas.
+>
+> Fuente: [click/README.md](https://github.com/pallets/click/blob/main/README.md).
+
+### Saber cómo está organizado
+
+* **Estructura de carpetas** — el paquete principal suele estar en `src/<paquete>/` o `<paquete>/`.
+* **pyproject.toml** — dependencias, versión mínima de Python y herramientas configuradas.
+* **Puntos de entrada** — el `__init__.py` del paquete principal y su `__all__` (si existe) describen la API pública.
+* **Tests** — `tests/` es la documentación viva más fiable: muestran casos de uso y contratos.
+* **Documentación** — la carpeta `docs/` o la correspondiente web oficial.
 
 Cada capítulo del curso propondrá una ruta de lectura concreta dentro de uno o varios proyectos. Pero antes, es recomendable que prepares tu equipo para explorarlos.
 
