@@ -6,24 +6,24 @@ Ahora que los ordenadores saben programar, leer y entender código se hace mucho
 
 Cada capítulo se apoya en una de las librerías de referencia como fuente principal de ejemplos; los cruces son intencionados para releer los mismos repos desde ángulos distintos.
 
-1. **Cómo leer código** — recomendaciones sobre cómo acercarse por primera vez a las fuentes de un programa.
-2. **Sintaxis y tipos básicos** — variables, primitivas, operadores, condicionales y bucles.
-3. **Colecciones e iteración** — listas, tuplas, diccionarios, conjuntos, comprehensions, iteradores y generadores.
-4. **Funciones** — argumentos, `*args`/`**kwargs`, closures, lambdas y decoradores.
-5. **Manejo de errores** — `try`/`except`/`finally`, jerarquía de excepciones y excepciones propias.
-6. **Clases e introducción a la orientación a objetos** — atributos, métodos, *dunders*, herencia vs composición y `dataclass`.
-7. **Tipado estático** — `typing`, `Protocol`, `TypeVar`, `Optional` y `TYPE_CHECKING`.
-8. **Context managers y gestión de recursos** — `with`, `contextlib`, ficheros y `pathlib`.
-9. **Programación asíncrona** — `async`/`await`, corrutinas, `asyncio`, iteradores y context managers asíncronos.
-10. **Módulos y paquetes** — `import`, `__init__.py`, imports relativos, `__all__` y separación entre API pública e interna.
-11. **Tests con pytest** — fixtures, parametrización, *mocks* y cobertura.
-12. **Tooling moderno** — entorno virtual con `uv`, `pyproject.toml`, `ruff`, `mypy`, `pre-commit` y CI en GitHub Actions.
-13. **Documentación** — docstrings (estilo Google/NumPy), Sphinx/MkDocs y ejemplos ejecutables.
-14. **Logging** — el módulo `logging` de la librería estándar, *loggers*, *handlers*, niveles, configuración y buenas prácticas.
-15. **Patrones de desarrollo** — inmutabilidad y APIs fluidas, decoradores como puntos de extensión, composición sobre herencia, funciones puras y *pipelines* de iteración.
-16. **Arquitectura de aplicaciones** — modelado de dominio, patrón repositorio, casos de uso, unidades de trabajo y orientación a eventos.
-17. **Empaquetado y distribución** — versionado, `build` y publicación en PyPI.
-18. **Siguientes pasos** — guía para leer proyectos medianos y grandes, con enlaces a las listas de profundización.
+1. **Cómo leer código** — recomendaciones para acercarte por primera vez al código fuente de un programa sin agobios.
+2. **Sintaxis y tipos básicos** — variables, datos elementales, operadores, condicionales y bucles.
+3. **Colecciones e iteración** — listas, tuplas, diccionarios y conjuntos, además de formas compactas de recorrerlos y construirlos.
+4. **Funciones** — cómo pasar argumentos flexibles, reutilizar lógica en funciones anidadas, escribir funciones pequeñas y envolver otras para cambiar su comportamiento.
+5. **Manejo de errores** — cómo detectar y tratar fallos sin que el programa se detenga, los tipos de excepción que existen y cómo crear las tuyas.
+6. **Clases e introducción a la orientación a objetos** — atributos, métodos, métodos especiales, cuándo heredar y cuándo componer, y una forma sencilla de definir clases de datos.
+7. **Tipado estático** — cómo añadir pistas de tipo al código, definir interfaces y tipos genéricos, marcar valores opcionales y separar las importaciones de tipo cuando haga falta.
+8. **Gestión de recursos** — cómo abrir y cerrar ficheros y otros recursos de forma segura usando bloques contextuales y utilidades de la librería estándar.
+9. **Programación asíncrona** — cómo escribir código que espera sin bloquear, con corrutinas y el bucle de eventos, incluida la iteración y la gestión de recursos asíncrona.
+10. **Módulos y paquetes** — cómo organizar tu código en varios archivos, exponer solo lo necesario y separar la API pública de los detalles internos.
+11. **Tests con pytest** — cómo preparar datos de prueba de forma reutilizable, ejecutar el mismo test con varios casos, simular dependencias y medir la cobertura.
+12. **Tooling moderno** — cómo aislar dependencias y mantener el código limpio y consistente, desde el entorno virtual hasta la integración continua.
+13. **Documentación** — cómo escribir explicaciones útiles dentro del propio código, generar documentación del proyecto y mantener ejemplos ejecutables.
+14. **Logging** — cómo registrar lo que hace tu programa, con distintos niveles de detalle y destinos, y buenas prácticas para no llenar el disco de ruido.
+15. **Patrones de desarrollo** — inmutabilidad, interfaces fluidas, composición frente a herencia, funciones puras y encadenado de operaciones de iteración.
+16. **Arquitectura de aplicaciones** — cómo modelar el dominio, separar el acceso a datos con el patrón repositorio, organizar casos de uso y orientar el flujo a eventos.
+17. **Empaquetado y distribución** — cómo versionar tu proyecto, construir el paquete y publicarlo en el índice oficial de Python.
+18. **Siguientes pasos** — guía para leer proyectos de tamaño mediano y grande, con enlaces a las listas de profundización.
 
 ## Criterios de selección
 
