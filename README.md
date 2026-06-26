@@ -1,10 +1,8 @@
 # Leyendo Python
 
-Ahora que los ordenadores saben programar, leer y entender código se hace mucho más importante. Por eso, este curso explora una forma diferente de estudiar programación basada en empezar por leer y analizar código de proyectos existentes.
+Ahora que los ordenadores saben programar, leer y entender código se hace más importante que nunca. Por eso, este curso explora una forma diferente de estudiar programación basada en leer y analizar código de proyectos existentes.
 
 ## Índice
-
-Cada capítulo se apoya en una de las librerías de referencia como fuente principal de ejemplos; los cruces son intencionados para releer los mismos repos desde ángulos distintos.
 
 1. **Cómo leer código** — recomendaciones para acercarte por primera vez al código fuente de un programa sin agobios.
 2. **Sintaxis y tipos básicos** — variables, datos elementales, operadores, condicionales y bucles.
@@ -34,6 +32,17 @@ Los repositorios que este curso usa como referencias cumplen, como mínimo:
 3. **Código libre**, con licencia abierta y desarrollo en público.
 4. **Reducido tamaño** para hacer su estudio asequible.
 
+### Bibliografía
+
+| Título | Escrito por | Descripción |
+| --- | --- | --- |
+| **Python for everybody** | Charles R. Severance | Introducción muy accesible para quien nunca ha programado.<br/>Destaca por su tono cercano y ejemplos sencillos. |
+| **Think Python** | Allen Downey | Enseña a razonar como un programador.<br/>Su punto fuerte es el enfoque en pensamiento computacional y resolución de problemas. |
+| **Beyond the basic stuff** | Al Sweigart | Puente entre principiante e intermedio.<br/>Sobresale en buenas prácticas de código limpio y depuración. |
+| **The Hitchiker's Guide to Python** | Kenneth Reitz<br/>Tanya Schlusser | Guía de buenas prácticas y tooling.<br/>Destaca como referencia rápida del ecosistema Python moderno. |
+| **Architecture Patterns with Python** | Harry J.W. Percival<br/>Bob Gregory | Introduce Domain-Driven Design y patrones de arquitectura.<br/>Su fuerte son los ejemplos de testing y arquitectura hexagonal. |
+| **A byte of Python** | Swaroop C H | Manual conciso y gratuito.<br/>Brilla como referencia compacta para principiantes y como repaso para programadores. |
+
 ### Referencias
 
 | Projecto | Descripción |
@@ -49,7 +58,6 @@ Para seguir profundizando, una vez terminado el curso, hemos creado algunas list
 
 - [Librerías para profundizar](./docs/referencias-adicionales/librerias-para-profundizar.md)
 - [Aplicaciones con interfaces gráficas](./docs/referencias-adicionales/aplicaciones-con-interfaces-graficas.md)
-- [Libros de referencia](./docs/referencias-adicionales/libros-de-referencia.md)
 
 ## Licencia
 
