@@ -4,7 +4,7 @@
 
 Hoy en día el código fuente de cualquier programa que se precie vive en repositorios con control de versiones. Un repositorio es una carpeta que puede contener archivos y más carpetas dentro. Y el control de versiones es un sistema que permite llevar control de los cambios por los que pasa cada fichero.
 
-El sistema de control de cambios más popular hoy en día es, sin duda, **Git**. Y lo mejor que puedes hacer para familiarizarte rápido con él, si aún no lo conocías, es abrir un repositorio (como [click](https://github.com/pallets/click/)) y explorarlo. Verás que se parece mucho a un explorador de archivos.
+El sistema de control de cambios más popular hoy en día es, sin duda, **Git**. Y lo mejor que puedes hacer para familiarizarte rápido con él, si aún no lo conocías, es abrir un repositorio y explorarlo. Verás que se parece mucho a un explorador de archivos.
 
 ### Saber cómo está organizado
 
@@ -54,7 +54,7 @@ Las dependencias son paquetes en los que se apoya tu programa para funcionar. En
 
 Dentro de ese archivo podemos distinguir tres tipos de dependencias.
 
-* En primer lugar están las de producción, que necesita cualquiera que instale el paquete. Click casi no las usa: únicamente **colorama** y solo en Windows. [pendulum](https://github.com/python-pendulum/pendulum/blob/master/pyproject.toml), en cambio, declara **python-dateutil** y **tzdata** mientras que [more-itertools](https://github.com/more-itertools/more-itertools/blob/master/pyproject.toml) no declara ninguna.
+* En primer lugar están las de producción, que necesita cualquiera que instale el paquete. Click casi no las usa: únicamente **colorama** y solo en Windows. [pendulum](https://github.com/python-pendulum/pendulum/blob/b99bd1468b5562f045c90d851c4fab0072b26df8/pyproject.toml), en cambio, declara **python-dateutil** y **tzdata** mientras que [more-itertools](https://github.com/more-itertools/more-itertools/blob/5d946b3590bfe92f1465c1b9b9830dd434745c84/pyproject.toml) no declara ninguna.
 
     > **Ejemplo**: [click/pyproject.toml](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/pyproject.toml)
     >
@@ -96,9 +96,9 @@ Dentro de ese archivo podemos distinguir tres tipos de dependencias.
     > ]
     > ```
 
-También es posible que encuentres las dependencias en ficheros **requirements.txt**, sobre todo en los proyectos más antiguos. Cuando un proyecto que usa este sistema quiere separar dependencias de producción y desarrollo, normalmente las encontrarás en varios ficheros. [more-itertools](https://github.com/more-itertools/more-itertools/tree/master/requirements) las reparte en varios archivos dentro de una carpeta y [python-dotenv](https://github.com/theskumar/python-dotenv/blob/main/requirements.txt) las lista en un único fichero.
+También es posible que encuentres las dependencias en ficheros **requirements.txt**, sobre todo en los proyectos más antiguos. Cuando un proyecto que usa este sistema quiere separar dependencias de producción y desarrollo, normalmente las encontrarás en varios ficheros. [more-itertools](https://github.com/more-itertools/more-itertools/tree/5d946b3590bfe92f1465c1b9b9830dd434745c84/requirements) las reparte en varios archivos dentro de una carpeta y [python-dotenv](https://github.com/theskumar/python-dotenv/blob/main/requirements.txt) las lista en un único fichero.
 
-> **Ejemplo**: [more-itertools/requirements/testing.txt](https://github.com/more-itertools/more-itertools/blob/master/requirements/testing.txt)
+> **Ejemplo**: [more-itertools/requirements/testing.txt](https://github.com/more-itertools/more-itertools/blob/5d946b3590bfe92f1465c1b9b9830dd434745c84/requirements/testing.txt)
 > 
 > ```
 > coverage
@@ -107,7 +107,7 @@ También es posible que encuentres las dependencias en ficheros **requirements.t
 
 Además, los ficheros de dependencias **.txt** pueden usarse para agrupar otras dependencias.
 
-> **Ejemplo**: [more-itertools/requirements/development.txt](https://github.com/more-itertools/more-itertools/blob/master/requirements/development.txt)
+> **Ejemplo**: [more-itertools/requirements/development.txt](https://github.com/more-itertools/more-itertools/blob/5d946b3590bfe92f1465c1b9b9830dd434745c84/requirements/development.txt)
 > 
 > ```
 > --requirement testing.txt
