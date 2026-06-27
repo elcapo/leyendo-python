@@ -124,4 +124,17 @@ Junto a las dependencias, **pyproject.toml** suele indicar qué versión de Pyth
 > requires-python = ">=3.10"
 > ```
 
-Además, muchos repositorios incluyen un fichero de bloqueo: **uv.lock** en click o **poetry.lock** en rich y pendulum. Su utilidad es fijar versiones exactas de todas las dependencias para que un mismo entorno pueda reproducirse de forma fiable, tanto en desarrollo como en integración continua y, en el caso de las aplicaciones, también en producción.
+Por último, muchos repositorios incluyen un fichero de bloqueo: **uv.lock** en click o **poetry.lock** en rich y pendulum. Su utilidad es fijar versiones exactas de todas las dependencias para que un mismo entorno pueda reproducirse de forma fiable, tanto en desarrollo como en integración continua y, en el caso de las aplicaciones, también en producción.
+
+> **Ejemplo**: [click/uv.lock](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/uv.lock)
+>
+> ```toml
+> [[package]]
+> name = "alabaster"
+> version = "1.0.0"
+> source = { registry = "https://pypi.org/simple" }
+> sdist = { url = "https://files.pythonhosted.org/packages/a6/f8/d9c74d0daf3f742840fd818d69cfae176fa332022fd44e3469487d5a9420/alabaster-1.0.0.tar.gz", hash = "sha256:c00dca57bca26fa62a6d7d0a9fcce65f3e026e9bfe33e9c538fd3fbb2144fd9e", size = 24210, upload-time = "2024-07-26T18:15:03.762Z" }
+> wheels = [
+>     { url = "https://files.pythonhosted.org/packages/7e/b3/6b4067be973ae96ba0d615946e314c5ae35f9f993eca561b356540bb0c2b/alabaster-1.0.0-py3-none-any.whl", hash = "sha256:fc6786402dc3fcb2de3cabd5fe455a2db534b371124f1f21de8731783dec828b", size = 13929, upload-time = "2024-07-26T18:15:02.05Z" },
+> ]
+> ```
