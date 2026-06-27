@@ -31,22 +31,20 @@ click/
 Cuando veas por primera vez el código fuente de un programa que no conocías previamente, en una primera lectura rápida tus ojos deberían de empezar por buscar un archivo **README.md**. En condiciones normales, ahí encontrarás un resumen explicando en qué consiste el proyecto y algunas instrucciones sobre cómo instalarlo y cómo ponerlo en marcha.
 
 
-> **Ejemplo**
+> **Ejemplo**: [click/README.md](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/README.md)
 >
 > Click es un paquete de Python para crear interfaces de línea de comandos atractivas de forma modular, con el mínimo código necesario. Es el "Kit de Creación de Interfaces de Línea de Comandos". Es altamente configurable, pero incluye configuraciones predeterminadas prácticas.
->
-> Archivo completo: [click/README.md](https://github.com/pallets/click/blob/main/README.md).
 
 
 #### Código fuente
 
 El código fuente es el conjunto de archivos con código Python. Lo normal es que consista en archivos con extensión **.py**. Dentro de ese conjunto de archivos podemos distinguir tres tipos según el nombre que tengan.
 
-* En primer lugar están los módulos, que son los archivos cuyo nombre empieza por una letra (ej. [core.py](https://github.com/pallets/click/blob/main/src/click/core.py)). Estos son los archivos "normales": contienen código que escribes para que tu programa haga su trabajo y puedes importarlos o ejecutarlos directamente cuando lo necesites.
+* En primer lugar están los módulos, que son los archivos cuyo nombre empieza por una letra (ej. [core.py](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/src/click/core.py)). Estos son los archivos "normales": contienen código que escribes para que tu programa haga su trabajo y puedes importarlos o ejecutarlos directamente cuando lo necesites.
 
-* Junto a ellos existen otros dos tipos que se reconocen por empezar con guiones bajos. Los que comienzan con un guión bajo (ej. [_utils.py](https://github.com/pallets/click/blob/main/src/click/_utils.py)) son archivos "internos": su autor indica con ese prefijo que están pensados para usarse dentro del paquete y no forman parte de la interfaz pública que se espera que uses desde fuera.
+* Junto a ellos existen otros dos tipos que se reconocen por empezar con guiones bajos. Los que comienzan con un guión bajo (ej. [_utils.py](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/src/click/_utils.py)) son archivos "internos": su autor indica con ese prefijo que están pensados para usarse dentro del paquete y no forman parte de la interfaz pública que se espera que uses desde fuera.
 
-* Por último, los archivos que empiezan con dos guiones bajos (ej. [__init__.py](https://github.com/pallets/click/blob/main/src/click/__init__.py)) tienen un significado especial para el propio Python y el lenguaje los reserva para funciones concretas, por ejemplo para marcar que una carpeta es un paquete o para definir comportamientos de inicialización.
+* Por último, los archivos que empiezan con dos guiones bajos (ej. [__init__.py](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/src/click/__init__.py)) tienen un significado especial para el propio Python y el lenguaje los reserva para funciones concretas, por ejemplo para marcar que una carpeta es un paquete o para definir comportamientos de inicialización.
 
 La ubicación del código fuente varía. Lo más habitual es encontrarlo en **src/\<paquete\>/** aunque en muchos proyectos está directamente en **\<paquete\>/** (ej. [rich](https://github.com/Textualize/rich)). También es habitual encontrar repositorios más maduros que siguen convenciones que ya no se usan tanto, como **lib/\<paquete\>/** pero que antaño fueron estándar (ej. [ansible](https://github.com/ansible/ansible)).
 
@@ -58,72 +56,72 @@ Dentro de ese archivo podemos distinguir tres tipos de dependencias.
 
 * En primer lugar están las de producción, que necesita cualquiera que instale el paquete. Click casi no las usa: únicamente **colorama** y solo en Windows. [pendulum](https://github.com/python-pendulum/pendulum/blob/master/pyproject.toml), en cambio, declara **python-dateutil** y **tzdata** mientras que [more-itertools](https://github.com/more-itertools/more-itertools/blob/master/pyproject.toml) no declara ninguna.
 
-**Ejemplo**: [click/pyproject.toml](https://github.com/pallets/click/blob/main/pyproject.toml)
-
-```toml
-requires-python = ">=3.10"
-dependencies = [
-    "colorama; platform_system == 'Windows'",
-]
-```
+    > **Ejemplo**: [click/pyproject.toml](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/pyproject.toml)
+    >
+    > ```toml
+    > requires-python = ">=3.10"
+    > dependencies = [
+    >     "colorama; platform_system == 'Windows'",
+    > ]
+    > ```
 
 * Junto a ellas existen las opcionales, que se instalan solo para quien las pide expresamente. [python-dotenv](https://github.com/theskumar/python-dotenv/blob/main/pyproject.toml) ofrece **click** a través del extra `cli` y [rich](https://github.com/Textualize/rich/blob/main/pyproject.toml) ofrece **ipywidgets** a través del extra `jupyter`. Así el paquete base se mantiene ligero y cada quien añade solo lo que use.
 
-**Ejemplo**: [python-dotenv/pyproject.toml](https://github.com/theskumar/python-dotenv/blob/main/pyproject.toml)
-
-```toml
-[project.optional-dependencies]
-cli = [
-    "click>=5.0",
-]
-```
+    > **Ejemplo**: [python-dotenv/pyproject.toml](https://github.com/theskumar/python-dotenv/blob/main/pyproject.toml)
+    > 
+    > ```toml
+    > [project.optional-dependencies]
+    > cli = [
+    >     "click>=5.0",
+    > ]
+    > ```
 
 * Por último, las de desarrollo solo las necesita quien trabaja en el proyecto: tests, documentación, comprobación de tipos, formato, etc. click las agrupa en **[dependency-groups]**, rich las pone en **[tool.poetry.dev-dependencies]**
 
-**Ejemplo**: [click/pyproject.toml](https://github.com/pallets/click/blob/main/pyproject.toml)
-
-```toml
-[dependency-groups]
-dev = [
-    "ruff",
-    "tox",
-    "tox-uv",
-]
-docs = [
-    "myst-parser",
-    "pallets-sphinx-themes",
-    "sphinx",
-    "sphinx-tabs",
-    "sphinxcontrib-log-cabinet",
-]
-```
+    > **Ejemplo**: [click/pyproject.toml](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/pyproject.toml)
+    > 
+    > ```toml
+    > [dependency-groups]
+    > dev = [
+    >     "ruff",
+    >     "tox",
+    >     "tox-uv",
+    > ]
+    > docs = [
+    >     "myst-parser",
+    >     "pallets-sphinx-themes",
+    >     "sphinx",
+    >     "sphinx-tabs",
+    >     "sphinxcontrib-log-cabinet",
+    > ]
+    > ```
 
 También es posible que encuentres las dependencias en ficheros **requirements.txt**, sobre todo en los proyectos más antiguos. Cuando un proyecto que usa este sistema quiere separar dependencias de producción y desarrollo, normalmente las encontrarás en varios ficheros. [more-itertools](https://github.com/more-itertools/more-itertools/tree/master/requirements) las reparte en varios archivos dentro de una carpeta y [python-dotenv](https://github.com/theskumar/python-dotenv/blob/main/requirements.txt) las lista en un único fichero.
 
-**Ejemplo**: [more-itertools/requirements/testing.txt](https://github.com/more-itertools/more-itertools/blob/master/requirements/testing.txt)
-
-```
-coverage
-ruff
-```
+> **Ejemplo**: [more-itertools/requirements/testing.txt](https://github.com/more-itertools/more-itertools/blob/master/requirements/testing.txt)
+> 
+> ```
+> coverage
+> ruff
+> ```
 
 Además, los ficheros de dependencias **.txt** pueden usarse para agrupar otras dependencias.
 
-**Ejemplo**: [more-itertools/requirements/development.txt](https://github.com/more-itertools/more-itertools/blob/master/requirements/development.txt)
-
-```
---requirement testing.txt
---requirement typechecks.txt
---requirement ../docs/requirements.txt
---requirement packaging.txt
-```
+> **Ejemplo**: [more-itertools/requirements/development.txt](https://github.com/more-itertools/more-itertools/blob/master/requirements/development.txt)
+> 
+> ```
+> --requirement testing.txt
+> --requirement typechecks.txt
+> --requirement ../docs/requirements.txt
+> --requirement packaging.txt
+> ```
 
 Junto a las dependencias, **pyproject.toml** suele indicar qué versión de Python hace falta.
 
-**Ejemplo**: [click/pyproject.toml](https://github.com/pallets/click/blob/main/pyproject.toml)
-
-```toml
-requires-python = ">=3.10"
-```
+> **Ejemplo**: [click/pyproject.toml](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/pyproject.toml)
+> 
+> ```toml
+> requires-python = ">=3.10"
+> ```
 
 Además, muchos repositorios incluyen un fichero de bloqueo: **uv.lock** en click o **poetry.lock** en rich y pendulum. Su utilidad es fijar versiones exactas de todas las dependencias para que un mismo entorno pueda reproducirse de forma fiable, tanto en desarrollo como en integración continua y, en el caso de las aplicaciones, también en producción.
