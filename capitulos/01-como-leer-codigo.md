@@ -62,7 +62,7 @@ Dentro de ese archivo podemos distinguir tres tipos de dependencias.
 
 * En primer lugar están las de producción, que necesita cualquiera que instale el paquete. Click casi no las usa: únicamente **colorama** y solo en Windows. [pendulum](https://github.com/python-pendulum/pendulum/blob/b99bd1468b5562f045c90d851c4fab0072b26df8/pyproject.toml), en cambio, declara **python-dateutil** y **tzdata** mientras que [more-itertools](https://github.com/more-itertools/more-itertools/blob/5d946b3590bfe92f1465c1b9b9830dd434745c84/pyproject.toml) no declara ninguna.
 
-    > **Ejemplo**: [click/pyproject.toml](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/pyproject.toml)
+    > **Ejemplo**: [click/pyproject.toml](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/pyproject.toml#L16-L19)
     >
     > ```toml
     > requires-python = ">=3.10"
@@ -73,7 +73,7 @@ Dentro de ese archivo podemos distinguir tres tipos de dependencias.
 
 * Junto a ellas existen las opcionales, que se instalan solo para quien las pide expresamente. [python-dotenv](https://github.com/theskumar/python-dotenv/blob/main/pyproject.toml) ofrece **click** a través del extra `cli` y [rich](https://github.com/Textualize/rich/blob/main/pyproject.toml) ofrece **ipywidgets** a través del extra `jupyter`. Así el paquete base se mantiene ligero y cada quien añade solo lo que use.
 
-    > **Ejemplo**: [python-dotenv/pyproject.toml](https://github.com/theskumar/python-dotenv/blob/main/pyproject.toml)
+    > **Ejemplo**: [python-dotenv/pyproject.toml](https://github.com/theskumar/python-dotenv/blob/36004e0e34be7665ff2b11a8a4005144f76f176d/pyproject.toml#L46-L49)
     > 
     > ```toml
     > [project.optional-dependencies]
@@ -84,7 +84,7 @@ Dentro de ese archivo podemos distinguir tres tipos de dependencias.
 
 * Por último, las de desarrollo solo las necesita quien trabaja en el proyecto: tests, documentación, comprobación de tipos, formato, etc. click las agrupa en **[dependency-groups]**, rich las pone en **[tool.poetry.dev-dependencies]**
 
-    > **Ejemplo**: [click/pyproject.toml](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/pyproject.toml)
+    > **Ejemplo**: [click/pyproject.toml](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/pyproject.toml#L28-L40)
     > 
     > ```toml
     > [dependency-groups]
@@ -124,7 +124,7 @@ Además, los ficheros de dependencias **.txt** pueden usarse para agrupar otras 
 
 Junto a las dependencias, **pyproject.toml** suele indicar qué versión de Python hace falta.
 
-> **Ejemplo**: [click/pyproject.toml](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/pyproject.toml)
+> **Ejemplo**: [click/pyproject.toml](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/pyproject.toml#L16)
 > 
 > ```toml
 > requires-python = ">=3.10"
@@ -132,7 +132,7 @@ Junto a las dependencias, **pyproject.toml** suele indicar qué versión de Pyth
 
 Por último, muchos repositorios incluyen un fichero de bloqueo: **uv.lock** en click o **poetry.lock** en rich y pendulum. Su utilidad es fijar versiones exactas de todas las dependencias para que un mismo entorno pueda reproducirse de forma fiable, tanto en desarrollo como en integración continua y, en el caso de las aplicaciones, también en producción.
 
-> **Ejemplo**: [click/uv.lock](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/uv.lock)
+> **Ejemplo**: [click/uv.lock](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/uv.lock#L10-L17)
 >
 > ```toml
 > [[package]]
