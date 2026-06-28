@@ -23,18 +23,16 @@ click/
 │   └── _utils.py          # archivos internos identificados con un guion bajo
 ├── tests/                 # casos de uso y contratos
 ├── examples/              # pequeñas recetas de código listas para ejecutar
-└── docs/                  # documentación generada
+└── docs/                  # documentación
 ```
 
 #### Introducción
 
 Cuando veas por primera vez el código fuente de un programa que no conocías previamente, en una primera lectura rápida tus ojos deberían de empezar por buscar un archivo **README.md**. En condiciones normales, ahí encontrarás un resumen explicando en qué consiste el proyecto y algunas instrucciones sobre cómo instalarlo y cómo ponerlo en marcha.
 
-
 > **Ejemplo**: [click/README.md](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/README.md)
 >
 > Click es un paquete de Python para crear interfaces de línea de comandos atractivas de forma modular, con el mínimo código necesario. Es el "Kit de Creación de Interfaces de Línea de Comandos". Es altamente configurable, pero incluye configuraciones predeterminadas prácticas.
-
 
 #### Código fuente
 
@@ -137,4 +135,32 @@ Por último, muchos repositorios incluyen un fichero de bloqueo: **uv.lock** en 
 > wheels = [
 >     { url = "https://files.pythonhosted.org/packages/7e/b3/6b4067be973ae96ba0d615946e314c5ae35f9f993eca561b356540bb0c2b/alabaster-1.0.0-py3-none-any.whl", hash = "sha256:fc6786402dc3fcb2de3cabd5fe455a2db534b371124f1f21de8731783dec828b", size = 13929, upload-time = "2024-07-26T18:15:02.05Z" },
 > ]
+> ```
+
+#### Pruebas automatizadas
+
+Las pruebas automatizadas, o tests, son pequeños programas que usan tu proyecto para asegurarse de que funciona correctamente. Están optimizados para poder ejecutarse muchos de ellos en poco tiempo informando de forma clara de posibles errores.
+
+La ubicación más normal para estas pruebas es **tests/** y lo que encontrarás dentro son archivos con código Python, normalmente con nombres con el prefijo **test_** añadido tanto al nombre de los archivos como a cada una de las pruebas que implementan.
+
+> **Ejemplo**: [click/tests/test_basic.py](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/tests/test_basic.py#L13-L29)
+> 
+> ```python
+> def test_basic_functionality(runner):
+>     @click.command()
+>     def cli():
+>         """Hello World!"""
+>         click.echo("I EXECUTED")
+> 
+>     result = runner.invoke(cli, ["--help"])
+>     assert not result.exception
+>     assert "Hello World!" in result.output
+>     assert "Show this message and exit." in result.output
+>     assert result.exit_code == 0
+>     assert "I EXECUTED" not in result.output
+> 
+>     result = runner.invoke(cli, [])
+>     assert not result.exception
+>     assert "I EXECUTED" in result.output
+>     assert result.exit_code == 0
 > ```
