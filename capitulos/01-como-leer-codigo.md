@@ -30,9 +30,17 @@ click/
 
 Cuando veas por primera vez el código fuente de un programa que no conocías previamente, en una primera lectura rápida tus ojos deberían de empezar por buscar un archivo **README.md**. En condiciones normales, ahí encontrarás un resumen explicando en qué consiste el proyecto y algunas instrucciones sobre cómo instalarlo y cómo ponerlo en marcha.
 
-> **Ejemplo**: [click/README.md](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/README.md)
+> **Ejemplo**: [click/README.md](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/README.md?plain=1#L5-L8)
 >
 > Click es un paquete de Python para crear interfaces de línea de comandos atractivas de forma modular, con el mínimo código necesario. Es el "Kit de Creación de Interfaces de Línea de Comandos". Es altamente configurable, pero incluye configuraciones predeterminadas prácticas.
+
+#### Licencia
+
+La licencia es un contrato legal del equipo de desarrollo de una aplicación con el resto del mundo. En el caso de los repositorios que usamos como referencia en este curso, todos son de _código libre_, lo que en pocas palabras significa que puedes copiar esos programas, modificarlos y distribuir copias estén éstas modificadas, o no.
+
+> **Ejemplo**: [click/LICENSE.txt](https://github.com/pallets/click/blob/b2e30a175449cfda909ee4fbf4a29a6a071cad53/LICENSE.txt#L3-L5)
+>
+> Se permite la redistribución y el uso en formato fuente y binario, con o sin modificaciones.
 
 #### Código fuente
 
