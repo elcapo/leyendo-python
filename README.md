@@ -7,22 +7,36 @@ Ahora que los ordenadores saben programar, leer y entender código se hace más 
 
 ## Índice
 
+### Fundamentos del lenguaje
+
 1. [**Cómo leer código**](./capitulos/01-como-leer-codigo.md) — recomendaciones para acercarte por primera vez al código fuente de un programa sin agobios.
 2. **Sintaxis y tipos básicos** — variables, datos elementales, operadores, condicionales y bucles.
 3. **Colecciones e iteración** — listas, tuplas, diccionarios y conjuntos, además de formas compactas de recorrerlos y construirlos.
 4. **Funciones** — cómo pasar argumentos flexibles, reutilizar lógica en funciones anidadas, escribir funciones pequeñas y envolver otras para cambiar su comportamiento.
 5. **Manejo de errores** — cómo detectar y tratar fallos sin que el programa se detenga, los tipos de excepción que existen y cómo crear las tuyas.
+
+### Estructura y abstracción
+
 6. **Clases e introducción a la orientación a objetos** — atributos, métodos, métodos especiales, cuándo heredar y cuándo componer, y una forma sencilla de definir clases de datos.
 7. **Tipado estático** — cómo añadir pistas de tipo al código, definir interfaces y tipos genéricos, marcar valores opcionales y separar las importaciones de tipo cuando haga falta.
 8. **Gestión de recursos** — cómo abrir y cerrar ficheros y otros recursos de forma segura usando bloques contextuales y utilidades de la librería estándar.
 9. **Programación asíncrona** — cómo escribir código que espera sin bloquear, con corrutinas y el bucle de eventos, incluida la iteración y la gestión de recursos asíncrona.
 10. **Módulos y paquetes** — cómo organizar tu código en varios archivos, exponer solo lo necesario y separar la API pública de los detalles internos.
+
+### Calidad y herramientas
+
 11. **Tests con pytest** — cómo preparar datos de prueba de forma reutilizable, ejecutar el mismo test con varios casos, simular dependencias y medir la cobertura.
 12. **Tooling moderno** — cómo aislar dependencias y mantener el código limpio y consistente, desde el entorno virtual hasta la integración continua.
 13. **Documentación** — cómo escribir explicaciones útiles dentro del propio código, generar documentación del proyecto y mantener ejemplos ejecutables.
 14. **Logging** — cómo registrar lo que hace tu programa, con distintos niveles de detalle y destinos, y buenas prácticas para no llenar el disco de ruido.
+
+### Diseño y arquitectura
+
 15. **Patrones de desarrollo** — inmutabilidad, interfaces fluidas, composición frente a herencia, funciones puras y encadenado de operaciones de iteración.
 16. **Arquitectura de aplicaciones** — cómo modelar el dominio, separar el acceso a datos con el patrón repositorio, organizar casos de uso y orientar el flujo a eventos.
+
+### Distribución y continuación
+
 17. **Empaquetado y distribución** — cómo versionar tu proyecto, construir el paquete y publicarlo en el índice oficial de Python.
 18. **Siguientes pasos** — guía para leer proyectos de tamaño mediano y grande, con enlaces a las listas de profundización.
 
