@@ -1,18 +1,18 @@
 # Preparar el entorno
 
-## Control de versiones con `git`
+## Control de versiones
 
-Con independencia de cuáles son los lenguajes de programación con los que trabajas, se hace imprescindible una herramienta de control de versiones. Y **git** es con diferencia la más usada.
+Con independencia del lenguaje de programación con el que trabajes, contar con una herramienta de control de versiones es prácticamente imprescindible. Y **Git** es, con diferencia, la más utilizada.
 
-Gracias a **git** puedes pasar de trabajar en una carpeta con ciertos ficheros en un estado determinado, a trabajar en un repositorio, que es una carpeta con histórico de cambios.
+Gracias a **Git**, una carpeta con tus proyectos se convierte en un repositorio que conserva el historial de cambios de sus archivos. Es como si pudieras viajar en el tiempo y recuperar cualquier estado anterior del proyecto.
 
-Estos cambios permiten mantener ramas con distintas versiones de los contenidos, volver a versiones anteriores de cualquiera de los ficheros, o saber quién y cuándo se hizo cada cambio.
+Además, puedes mantener distintas líneas de desarrollo mediante ramas, conocer quién realizó cada cambio y cuándo lo hizo, o comparar la evolución del proyecto entre diferentes momentos.
 
 ### Herramientas de consulta online
 
-Cuando un repositorio mantenido con **git** se convierte en un proyecto compartido, es normal querer compartirlo con otra gente para editarlo de forma colaborativa. Para resolver esto, existen dos herramientas básicas:
+Cuando un repositorio mantenido con **Git** se convierte en un proyecto compartido, es normal querer compartirlo con otra gente para editarlo de forma colaborativa. Para resolver esto, existen dos herramientas básicas:
 
-* [GitHub](https://github.com): El sitio web de repositorios de código más grande del mundo, mantenido por los autores mismos de **git**.
+* [GitHub](https://github.com): El sitio web de repositorios de código más grande del mundo, mantenido por los autores mismos de **Git**.
 
 * [GitLab](https://about.gitlab.com): Una alternativa a GitHub que puede ser alojada en servidores privados, o hasta en ordenadores personales.
 
@@ -20,7 +20,7 @@ En la práctica, puedes seguir este curso completo usando únicamente un navegad
 
 Además de que, al clonarlos, ganas la posibilidad de trabajar cuando no tengas conexión a internet y se facilitan enormemente las tareas de lectura, edición y ejecución paso a paso.
 
-Por eso, te recomiendo que sigas las [instrucciones oficiales de instalación de **git**](https://git-scm.com/downloads).
+Por eso, te recomiendo que sigas las [instrucciones oficiales de instalación de **Git**](https://git-scm.com/downloads).
 
 ## Gestión de paquetes con `uv`
 
@@ -67,10 +67,10 @@ El script crea la carpeta `repositorios/` y dentro clona los seis proyectos que 
 | rich | `repositorios/rich/` | <https://github.com/Textualize/rich> |
 | tenacity | `repositorios/tenacity/` | <https://github.com/jd/tenacity> |
 
-Si más adelante vuelves a ejecutar el script sobre un repositorio ya clonado, en lugar de clonarlo otra vez lo actualiza con los últimos cambios mediante:
+Si más adelante vuelves a ejecutar el script, en lugar de clonar los repositorios desde cero, los actualiza con los últimos cambios usando:
 
 ```bash
 git pull --ff-only
 ```
 
-El flag `--ff-only` asegura que la actualización solo prospera si puede hacerse avanzando la rama local sin mezclar cambios —útil si alguna vez has tocado la copia local por tu cuenta, porque el script no la pisará en silencio.
+El flag `--ff-only` asegura que la actualización solo prospera si puede hacerse avanzando la rama local sin machacar cambios. Es útil por si alguna vez decides tocar las copias locales para hacer alguna prueba.

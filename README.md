@@ -2,9 +2,12 @@
 
 Ahora que los ordenadores saben programar, leer y entender código se hace más importante que nunca. Por eso, este curso explora una forma diferente de estudiar programación basada en leer y analizar código de proyectos existentes.
 
+> [!NOTE]
+> Para seguir el curso en condiciones, es recomendable primero [preparar tu equipo](./docs/preparar-el-entorno.md).
+
 ## Índice
 
-1. **Cómo leer código** — recomendaciones para acercarte por primera vez al código fuente de un programa sin agobios.
+1. [**Cómo leer código**](./capitulos/01-como-leer-codigo.md) — recomendaciones para acercarte por primera vez al código fuente de un programa sin agobios.
 2. **Sintaxis y tipos básicos** — variables, datos elementales, operadores, condicionales y bucles.
 3. **Colecciones e iteración** — listas, tuplas, diccionarios y conjuntos, además de formas compactas de recorrerlos y construirlos.
 4. **Funciones** — cómo pasar argumentos flexibles, reutilizar lógica en funciones anidadas, escribir funciones pequeñas y envolver otras para cambiar su comportamiento.
